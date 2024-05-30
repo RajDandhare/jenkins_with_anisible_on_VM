@@ -181,4 +181,4 @@ If you see your web page the pipeline was created Susseccfully!!!
 it might look like this if you use the provided index.html
 <br /><br />![jenkins-webpage](/../main/Pics/jenkins-webpage.png)
 
-<br /><br /><br /><br /><br /><br /><br />_If there is error in pipeline you see the error by clicking on the name which the step is failed and cliking on number of build History -> see console output_
+<br /><br /><br /><br /><br /><br /><br />_If there is error in pipeline you can check the error by clicking on the name which the step is failed and cliking on number of build History -> see console output_
