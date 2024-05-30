@@ -83,7 +83,7 @@ When the above command execution complites it will show you CODE for Jenkins cop
 <br /><br />![jenkins-code](/../main/Pics/jenkins-code.png) 
 
 Now open the VM's Browser and search :-
-> http://localhost:8080 <br /> #Else you can search it on your Device on which the VM is running and search <br /> http://[VM's IP address]:8080
+> http://localhost:8080 <br /> #Else you can search it on your Device on which the VM is running and search <br /> http://'VM's IP address':8080
 
 It will ask you for the CODE that we just copyed, paste it.
 <br /><br />![jenkins-askscode](/../main/Pics/jenkins-askscode.png)<br /><br />
@@ -134,7 +134,7 @@ We need this Repo. in our VM, make directory in '/' name 'git_files'
     cd /git_files
     git clone 'URL of your git repo.'
 
-### **Step 3 :**  Installing Docekr in Nodes VM
+### **Step 3 :**  Installing Docker on Nodes VM
 
 Using Ansible Playbook we can install Docekr on the Node. Playbook is avilable in this Repo.<br /> 
 Just copy all `yml` files here > /etc/ansible/ 
