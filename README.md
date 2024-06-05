@@ -88,10 +88,13 @@ Now open the VM's Browser and search :-
 It will ask you for the CODE that we just copyed, paste it.
 <br /><br />![jenkins-askscode](/../main/Pics/jenkins-askscode.png)<br /><br />
 
-After that it will for Plugin for Jenkins, Just select suggested plugins it will start the installation. Then you will be ask for signup on Jenkins.
-Next you will be ask for Login which you just signup for Jenkins.
+After that it will for Plugin for Jenkins, Just select suggested plugins it will start the installation. Then you will be ask for signup on Jenkins.<br />
+Next you will be ask for Login which you just signup for Jenkins. It will take you to Blank Dashboard.
 
 <br /><br />![jenkins-dashboard](/../main/Pics/jenkins-dashboard.png)
+
+> [!Caution]
+> Now, open new terminal and don't close or stop the terminal where the Jenkins.war file is running.
 
 **Docker Installation :**
 
@@ -107,8 +110,8 @@ To start the docker service,
 
 You need to have Docker Account to Create your own docker images:-
 
-> How to create Docker Account link.
-> https://docs.docker.com/docker-id/
+> [!Tip]
+> How to create Docker Account link : https://docs.docker.com/docker-id/
 
 How to login in VM using terminal:
 
@@ -170,7 +173,12 @@ Save it and Go back to DashBoard and click on New item for Third and Final step 
 
 Final step... goto dashboard and click on play button of git_pull. 
 
+<br /><br />![jenkins-dashboard](/../main/Pics/jenkins-dashboard-1.png)
+
 And see the Build Executor Status if its complite or not.
+
+> [!NOTE]
+> you might need to refresh the page to check the every step status. [green or red]
 
 After Build is complite goto VM's Browser and search
 
