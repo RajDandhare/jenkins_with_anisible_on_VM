@@ -149,6 +149,7 @@ Just copy all `yml` files here > /etc/ansible/
 
 Goto Jenkins DashBoard in Browser, Click on 'New item' to create First step of pipeline.
 
+> [!Note]
 > `I run this pipeline as root user thats why i didn't use 'sudo' command, if you are not root user add 'sudo' in commands for running ansible playbook`
 
 <br />Select Freestyle Project, Name the project 'git_pull'. <br />Then do the same as shown in below figures:-
