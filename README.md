@@ -32,7 +32,8 @@ Collect all IP addresses of Node VMs
 
 ### **Step 1 :** Installing Ansible, Jenkins, Docker and Git on Master VM
 
-`**This Installation only be done on Master VM.**`
+> [!Note]
+> This Installation only be done on Master VM.
 
 **Ansible Installation :**
 
