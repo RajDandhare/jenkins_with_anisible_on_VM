@@ -35,40 +35,10 @@ Collect all IP addresses of Node VMs
 > [!Note]
 > This Installation only be done on Master VM.
 
-**Ansible Installation :**
-
-    sudo dnf install epel-release python3 pip
-    sudo dnf install ansible
-    sudo pip install ansible
-
-We have to edit the hosts file of Ansible to keep track of all nodes.
-
-    sudo vi /etc/ansible/hosts
-
-> update it on last line of the file.<br />
-> [`server_name`]<br />
-> #add only on Nodes where the docker contaners will run<br />
-> `VM's IP address`
-
-you can also use provided hosts file for reference.
-
-Now we have to edit ansible.cfg file 
-
-    sudo vi /etc/ansible/ansible.cfg
-
-Append this on last line of the file: 
-
-    [defaults]
-    
-    #inventory = /root/anitest.yml
-    host_key_checking = False
-    #deprecation_warning = False
-    #remote_user = root
-
-Thats it for Ansible Installation!!!
 
 **Jenkins Installation :** 
 
+    sudo dnf install epel-release python3 pip
     sudo mkdir /jenkins
     sudo wget https://updates.jenkins.io/download/war/2.459/jenkins.war -P /jenkins # [must be latest]
 
@@ -123,6 +93,37 @@ How to login in VM using terminal:
     sudo yum install git 
     sudo git config --global user.email "email_address"
     sudo git config --global user.name "username"
+
+**Ansible Installation :**
+
+    sudo dnf install ansible
+    sudo pip install ansible
+
+We have to edit the hosts file of Ansible to keep track of all nodes.
+
+    sudo vi /etc/ansible/hosts
+
+> update it on last line of the file.<br />
+> [`server_name`]<br />
+> #add only on Nodes where the docker contaners will run<br />
+> `VM's IP address`
+
+you can also use provided hosts file for reference.
+
+Now we have to edit ansible.cfg file 
+
+    sudo vi /etc/ansible/ansible.cfg
+
+Append this on last line of the file: 
+
+    [defaults]
+    
+    #inventory = /root/anitest.yml
+    host_key_checking = False
+    #deprecation_warning = False
+    #remote_user = root
+
+Thats it for Ansible Installation!!!
 
 ### **Step 2 :** Create a repositorie in GitHub
 
