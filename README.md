@@ -30,13 +30,50 @@ Collect all IP addresses of Node VMs
     # to conformation of passwordless communicatioin
     ssh root@'IP_address_of_Node'
 
-### **Step 1 :** Installing Ansible, Jenkins, Docker and Git on Master VM
+### **Step 1 :** Installing Docker, Git, Jenkins and Ansible on Master VM
 
 > [!Note]
 > This Installation only be done on Master VM.
 
 
+**Docker Installation :**
+
+> [!Note]
+> [Docker](https://docs.docker.com/guides/docker-overview/) is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly. <br />
+> In this Project we will user docker container to deploy our website.
+
+    sudo dnf check-update    #update the system it need 
+    sudo dnf config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+    sudo dnf install docker-ce docker-ce-cli containerd.io
+
+To start the docker service, 
+
+    sudo systemctl start docker
+    sudo systemctl status docker
+    sudo systemctl enable docker    #make sure the service is 'active' after system is restarted/reboot 
+
+You need to have Docker Account to Create your own docker images:-
+
+> [!Tip]
+> How to create Docker Account link : https://docs.docker.com/docker-id/
+
+How to login in VM using terminal:
+
+    sudo docker login --username "your_email_address"    #Enter the password of docker account
+
+**Git Installation :**
+
+> [!Note]
+> [Git](https://git-scm.com/) is a distributed version control system that tracks versions of files. It is often used to control source code by programmers collaboratively developing software.
+
+    sudo yum install git 
+    sudo git config --global user.email "email_address"
+    sudo git config --global user.name "username"
+
 **Jenkins Installation :** 
+
+> [!Note]
+> [Jenkins](https://en.wikipedia.org/wiki/Jenkins_(software)) is an open source automation server. It helps automate the parts of software development related to building, testing, and deploying, facilitating continuous integration, and continuous delivery.
 
     sudo dnf install epel-release python3 pip
     sudo mkdir /jenkins
@@ -67,34 +104,10 @@ Next you will be ask for Login which you just signup for Jenkins. It will take y
 > [!Caution]
 > Now, open new terminal and don't close or stop the terminal where the Jenkins.war file is running.
 
-**Docker Installation :**
-
-    sudo dnf check-update    #update the system it need 
-    sudo dnf config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
-    sudo dnf install docker-ce docker-ce-cli containerd.io
-
-To start the docker service, 
-
-    sudo systemctl start docker
-    sudo systemctl status docker
-    sudo systemctl enable docker    #make sure the service is 'active' after system is restarted/reboot 
-
-You need to have Docker Account to Create your own docker images:-
-
-> [!Tip]
-> How to create Docker Account link : https://docs.docker.com/docker-id/
-
-How to login in VM using terminal:
-
-    sudo docker login --username "your_email_address"    #Enter the password of docker account
-
-**Git Installation :**
-
-    sudo yum install git 
-    sudo git config --global user.email "email_address"
-    sudo git config --global user.name "username"
-
 **Ansible Installation :**
+
+>[!Note]
+> [Ansible](https://www.ansible.com/) is a suite of software tools that enables infrastructure as code. It is open-source and the suite includes software provisioning, configuration management, and application deployment functionality.
 
     sudo dnf install ansible
     sudo pip install ansible
